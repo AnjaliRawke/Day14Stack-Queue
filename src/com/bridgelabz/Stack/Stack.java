@@ -1,6 +1,5 @@
 package com.bridgelabz.Stack;
 
-
 	public class Stack<T extends Comparable<T>> {
 		LinkedList<T> linkedList = new LinkedList<>();
 
@@ -12,4 +11,13 @@ package com.bridgelabz.Stack;
 			linkedList.show();
 		}
 
+		public T pop() {
+			return linkedList.pop();
+		}
+
+		public void peek() {
+			Integer peeked = (Integer) linkedList.pop();
+			System.out.println("The peek element is " + peeked);
+			linkedList.push((T) peeked);
+		}
 }
